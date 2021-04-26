@@ -16,7 +16,7 @@ body {
   position: relative;
   display: grid;
   place-items: center;
-  background: rgba(77, 172, 163, 0.247);
+  background: rgba(12, 217, 224, 0.404);
   border-radius: 6%;
 }
 
@@ -51,7 +51,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "screennn screennn screennn screennn"
-    "clear clear clear devide"
+    "clear clear undo devide"
     "seven eight nine multi"
     "four five six minus"
     "one two three plus"
@@ -71,6 +71,7 @@ body {
 
 #screenSmall {
   font-size: 45px;
+  color: rgba(255, 255, 255, 0.781);
 }
 
 #screenBig {
@@ -143,6 +144,11 @@ body {
   text-align: center;
 }
 
+#undo {
+  grid-area: undo;
+  text-align: center;
+}
+
 .numbers div {
   padding: 1rem;
   text-align: center;
@@ -161,6 +167,25 @@ body {
 
 .buttons,
 .buttons-longer {
-  background-color: rgba(212, 241, 241, 0.082);
+  /* background-color: rgba(212, 241, 241, 0.082); */
   box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(22, 24, 24, 0.521);
+}
+
+.buttons-lighter {
+  background-color: rgba(238, 238, 238, 0.281);
+}
+
+.buttons-darker {
+  background-color: rgba(69, 129, 218, 0.247);
+}
+
+#signiture {
+  position: absolute;
+  color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  bottom: 0.5rem;
+  right: 2rem;
+  font-family: "Shadows Into Light", cursive;
+  filter: blur(1px);
 }
