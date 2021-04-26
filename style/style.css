@@ -1,42 +1,189 @@
-/*
-    ==============================================
-                ****** RESET ******
-    ==============================================
-*/
-body {
-  margin: 0;
-}
-
-:root {
-  --color-red: #f42;
-  --bg-color-red: #f42;
-}
-
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-ul {
-  list-style: none;
+body {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+.calculator-panel-container {
+  position: relative;
+  display: grid;
+  place-items: center;
 }
 
-a:hover {
-  color: #333;
+.control-panel-box {
+  position: relative;
+  width: 420px;
+  height: 700px;
+  background: rgba(17, 17, 17, 0.089);
+  border-radius: 20%;
 }
 
-/*
-    ==============================================
-                ****** GLOBAL ******
-    ==============================================
-*/
+.control-panel-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #fb00, #ff0058);
+  border-radius: 6%;
+}
+
+.control-panel-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #fb00, #ff005904);
+  filter: blur(30px);
+  border-radius: 20%;
+}
+
+.calculator-panel {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(255, 255, 255, 0);
+  z-index: 2;
+  border-radius: 20%;
+}
+
+.calculator-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+  border-radius: 4%;
+}
+
+.numbers {
+  height: 600px;
+  color: black;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 50px;
+  font-weight: 100;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "screennn screennn screennn screennn"
+    "clear clear clear devide"
+    "seven eight nine multi"
+    "four five six minus"
+    "one two three plus"
+    "null null coma equal";
+}
+
+#screennn {
+  background-color: rgba(1, 13, 15, 0.082);
+  grid-area: screennn;
+  height: 120px;
+  border-bottom: 0.1px solid rgb(122, 114, 114);
+  border-start-start-radius: 10%;
+  margin: 0;
+}
+
+#multi {
+  grid-area: multi;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#equal {
+  grid-area: equal;
+}
+
+#coma {
+  grid-area: coma;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eigth {
+  grid-area: eigth;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#devide {
+  grid-area: devide;
+}
+
+#null {
+  grid-area: null;
+  text-align: center;
+}
+
+#clear {
+  grid-area: clear;
+  text-align: center;
+}
+
+.numbers div {
+  padding: 1rem;
+  text-align: center;
+}
+
+.buttons {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(212, 241, 241, 0.137);
+  border-radius: 50%;
+  line-height: 70px;
+}
+
+.buttons-longer {
+  background-color: rgba(212, 241, 241, 0.137);
+  border-radius: 10%;
+}
+
+.buttons,
+.buttons-longer {
+  box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(22, 24, 24, 0.521);
+}
