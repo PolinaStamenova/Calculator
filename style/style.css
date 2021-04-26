@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/images.jfif);
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -16,65 +16,33 @@ body {
   position: relative;
   display: grid;
   place-items: center;
-}
-
-.control-panel-box {
-  position: relative;
-  width: 420px;
-  height: 700px;
-  background: rgba(17, 17, 17, 0.089);
-  border-radius: 20%;
-}
-
-.control-panel-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, #fb00, #ff0058);
+  background: rgba(77, 172, 163, 0.247);
   border-radius: 6%;
 }
 
-.control-panel-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, #fb00, #ff005904);
-  filter: blur(30px);
-  border-radius: 20%;
-}
-
 .calculator-panel {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  right: 6px;
-  bottom: 6px;
-  background: rgba(255, 255, 255, 0);
-  z-index: 2;
-  border-radius: 20%;
+  position: relative;
+  width: auto;
+  height: 700px;
+  border-radius: 6%;
 }
 
-.calculator-panel::before {
-  content: "";
+.calculator-panel-hidden {
   position: absolute;
+  width: auto;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.1);
-  pointer-events: none;
-  border-radius: 4%;
+  height: 700px;
+  border-radius: 6%;
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0, 0, 0, 0.692);
+  z-index: -1;
 }
 
 .numbers {
   height: 600px;
-  color: black;
+  color: #fff;
   font-family: "Shadows Into Light", cursive;
   font-size: 50px;
   font-weight: 100;
@@ -91,12 +59,22 @@ body {
 }
 
 #screennn {
-  background-color: rgba(1, 13, 15, 0.082);
+  background-color: rgba(11, 81, 94, 0.288);
   grid-area: screennn;
+  width: auto;
   height: 120px;
   border-bottom: 0.1px solid rgb(122, 114, 114);
   border-start-start-radius: 10%;
-  margin: 0;
+  line-height: 3.5rem;
+  text-align: end;
+}
+
+#screenSmall {
+  font-size: 45px;
+}
+
+#screenBig {
+  font-size: 60px;
 }
 
 #multi {
@@ -173,17 +151,16 @@ body {
 .buttons {
   width: 70px;
   height: 70px;
-  background-color: rgba(212, 241, 241, 0.137);
   border-radius: 50%;
   line-height: 70px;
 }
 
 .buttons-longer {
-  background-color: rgba(212, 241, 241, 0.137);
   border-radius: 10%;
 }
 
 .buttons,
 .buttons-longer {
+  background-color: rgba(212, 241, 241, 0.082);
   box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(22, 24, 24, 0.521);
 }
