@@ -27,6 +27,7 @@ function onNumbercClick(seven){
 onNumbercClick(7)
 console.log(backScreen);
 
+get value from
 switch (key) {
     case value:
         
